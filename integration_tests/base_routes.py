@@ -1,6 +1,6 @@
 from robyn import Robyn, static_file, jsonify, WS
 
-from robyn.templating import JinjaTemplate
+# from robyn.templating import JinjaTemplate
 
 from robyn.log_colors import Colors
 import asyncio
@@ -13,8 +13,8 @@ websocket = WS(app, "/web_socket")
 i = -1
 
 logger = logging.getLogger(__name__)
-current_file_path = pathlib.Path(__file__).parent.resolve()
-jinja_template = JinjaTemplate(os.path.join(current_file_path, "templates"))
+# current_file_path = pathlib.Path(__file__).parent.resolve()
+# jinja_template = JinjaTemplate(os.path.join(current_file_path, "templates"))
 
 
 @websocket.on("message")
